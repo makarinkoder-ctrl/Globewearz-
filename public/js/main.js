@@ -1,40 +1,17 @@
 // ===== TELEGRAM WEB APP INTEGRATION =====
 let tg = window.Telegram?.WebApp;
 
-// Настройка Telegram Web App
+// Простая настройка Telegram Web App
 if (tg) {
     tg.ready();
-    tg.expand(); // Развернуть на весь экран
-    tg.enableClosingConfirmation(); // Подтверждение закрытия
-    tg.disableVerticalSwipes(); // Отключить свайпы вверх/вниз
-    tg.lockOrientation(); // Заблокировать поворот экрана
+    tg.expand();
     
-    // Предотвращаем сворачивание при скролле
-    document.addEventListener('touchstart', function(e) {
-        if (e.touches.length > 1) {
-            e.preventDefault();
-        }
-    }, { passive: false });
-    
-    document.addEventListener('touchmove', function(e) {
-        // Разрешаем скролл только внутри контента
-        const scrollableElement = e.target.closest('.scrollable, .products-grid, .catalog-container, body');
-        if (!scrollableElement) {
-            e.preventDefault();
-        }
-    }, { passive: false });
-    
-    // Применить темы Telegram
+    // Простые настройки
     document.addEventListener('DOMContentLoaded', function() {
-        if (tg.themeParams) {
-            document.body.style.backgroundColor = tg.themeParams.bg_color || '#000000';
-            document.body.style.color = tg.themeParams.text_color || '#ffffff';
-        }
-        
-        // Настроить главную кнопку
+        // Главная кнопка
         tg.MainButton.setText('Оформить заказ 🛒');
-        tg.MainButton.color = tg.themeParams.button_color || '#007AFF';
-        tg.MainButton.textColor = tg.themeParams.button_text_color || '#ffffff';
+        tg.MainButton.color = '#ff6b35';
+        tg.MainButton.textColor = '#ffffff';
         
         // Обработчик главной кнопки
         tg.MainButton.onClick(() => {
@@ -46,13 +23,8 @@ if (tg) {
             }
         });
         
-        // Скрыть главную кнопку по умолчанию
         tg.MainButton.hide();
     });
-    
-    // Настройки для стабильности
-    tg.setHeaderColor('#000000');
-    tg.setBackgroundColor('#000000');
 }
 
 // Функция обновления главной кнопки Telegram
