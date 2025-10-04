@@ -1,288 +1,259 @@
 /* ===== TELEGRAM WEB APP OPTIMIZATION ===== */
-/* Адаптация для мини-приложений Telegram */
-@media (max-width: 480px), (max-height: 800px) {
-    body {
-        padding: 6px !important;
-        font-size: 13px !important;
-        line-height: 1.4 !important;
-        background: var(--tg-theme-bg-color, var(--bg-primary)) !important;
-        color: var(--tg-theme-text-color, var(--text-primary)) !important;
-    }
-    
-    .container {
-        padding: 0 6px !important;
-        max-width: 100% !important;
-    }
-    
-    /* Заголовки и текст */
-    h1 {
-        font-size: 16px !important;
-        margin-bottom: 8px !important;
-        color: var(--tg-theme-text-color, var(--accent-color)) !important;
-        font-weight: 600 !important;
-    }
-    
-    h2 {
-        font-size: 14px !important;
-        margin-bottom: 6px !important;
-    }
-    
-    h3 {
-        font-size: 13px !important;
-        margin-bottom: 4px !important;
-    }
-    
-    /* Сетка товаров */
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 6px !important;
-        margin-bottom: 10px !important;
-    }
-    
-    /* Карточки товаров */
-    .product-card {
-        padding: 6px !important;
-        border-radius: 6px !important;
-        margin-bottom: 0 !important;
-    }
-    
-    .product-card img {
-        height: 100px !important;
-        width: 100% !important;
-        object-fit: cover !important;
-        border-radius: 4px !important;
-    }
-    
-    .product-title {
-        font-size: 11px !important;
-        line-height: 1.2 !important;
-        margin-bottom: 3px !important;
-        font-weight: 500 !important;
-        display: -webkit-box !important;
-        -webkit-line-clamp: 2 !important;
-        -webkit-box-orient: vertical !important;
-        overflow: hidden !important;
-    }
-    
-    .product-price {
-        font-size: 13px !important;
-        font-weight: 600 !important;
-        margin-bottom: 4px !important;
-    }
-    
-    /* Кнопки */
-    .btn {
-        padding: 6px 8px !important;
-        font-size: 11px !important;
-        border-radius: 4px !important;
-        font-weight: 500 !important;
-        min-height: 28px !important;
-        line-height: 1.2 !important;
-    }
-    
-    .btn-primary {
-        padding: 6px 10px !important;
-    }
-    
-    .btn-small {
-        padding: 4px 6px !important;
-        font-size: 10px !important;
-        min-height: 24px !important;
-    }
-    
-    /* Корзина */
-    .cart-section {
-        margin-top: 12px !important;
-        padding: 8px !important;
-    }
-    
-    .cart-header {
-        font-size: 14px !important;
-        margin-bottom: 6px !important;
-    }
-    
-    .cart-item {
-        padding: 6px !important;
-        margin-bottom: 4px !important;
-        font-size: 11px !important;
-    }
-    
-    .cart-item-title {
-        font-size: 11px !important;
-        font-weight: 500 !important;
-    }
-    
-    .cart-item-price {
-        font-size: 11px !important;
-    }
-    
-    .cart-controls button {
-        width: 24px !important;
-        height: 24px !important;
-        font-size: 11px !important;
-        padding: 0 !important;
-    }
-    
-    .quantity-display {
-        font-size: 11px !important;
-        padding: 2px 6px !important;
-    }
-    
-    /* Формы */
-    .checkout-form {
-        padding: 8px !important;
-    }
-    
-    .form-group {
-        margin-bottom: 8px !important;
-    }
-    
-    .form-group label {
-        font-size: 11px !important;
-        margin-bottom: 2px !important;
-        font-weight: 500 !important;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        padding: 6px 8px !important;
-        font-size: 12px !important;
-        border-radius: 4px !important;
-        min-height: 32px !important;
-    }
-    
-    /* Информация о доставке */
-    .delivery-info {
-        padding: 6px !important;
-        font-size: 10px !important;
-        margin-top: 6px !important;
-        border-radius: 4px !important;
-    }
-    
-    .delivery-hint {
-        font-size: 10px !important;
-        padding: 4px !important;
-    }
-    
-    /* Модальные окна */
-    .modal-content {
-        padding: 10px !important;
-        margin: 10px !important;
-        border-radius: 8px !important;
-    }
-    
-    .modal-header {
-        font-size: 14px !important;
-        margin-bottom: 8px !important;
-    }
-    
-    .modal-body {
-        font-size: 11px !important;
-    }
-    
-    /* Категории и фильтры */
-    .category-filter {
-        margin-bottom: 8px !important;
-    }
-    
-    .category-filter select {
-        padding: 6px 8px !important;
-        font-size: 11px !important;
-    }
-    
-    /* Статистика */
-    .stats-container {
-        padding: 8px !important;
-        margin-bottom: 8px !important;
-    }
-    
-    .stats-item {
-        font-size: 10px !important;
-        text-align: center !important;
-    }
-    
-    .stats-number {
-        font-size: 16px !important;
-        font-weight: 600 !important;
-    }
-    
-    .stats-label {
-        font-size: 9px !important;
-        text-transform: uppercase !important;
-    }
-    
-    /* Общие отступы */
-    .section-title {
-        font-size: 13px !important;
-        margin: 8px 0 6px 0 !important;
-    }
-    
-    .text-small {
-        font-size: 10px !important;
-    }
-    
-    .text-xs {
-        font-size: 9px !important;
-    }
-    
-    /* Навигация и хедер */
-    .header {
-        padding: 8px 0 !important;
-        margin-bottom: 8px !important;
-    }
-    
-    .navbar {
-        padding: 6px 0 !important;
-    }
-    
-    .nav-logo h1 {
-        font-size: 16px !important;
-        margin: 0 !important;
-    }
-    
-    .nav-tagline {
-        font-size: 9px !important;
-        display: none !important; /* Скрываем на мобильных */
-    }
-    
-    .nav-menu {
-        display: none !important; /* Скрываем меню на мобильных */
-    }
-    
-    .nav-actions {
-        gap: 6px !important;
-    }
-    
-    .search-input {
-        font-size: 11px !important;
-        padding: 6px 8px !important;
-        width: 120px !important;
-    }
-    
-    .cart-btn {
-        font-size: 11px !important;
-        padding: 6px 8px !important;
-        min-height: 28px !important;
-    }
-    
-    .cart-count {
-        font-size: 10px !important;
-        min-width: 16px !important;
-        height: 16px !important;
-        line-height: 16px !important;
-    }
-    
-    /* Убираем лишние отступы */
-    .mb-3 { margin-bottom: 6px !important; }
-    .mb-4 { margin-bottom: 8px !important; }
-    .mb-5 { margin-bottom: 10px !important; }
-    .mt-3 { margin-top: 6px !important; }
-    .mt-4 { margin-top: 8px !important; }
-    .mt-5 { margin-top: 10px !important; }
-    .p-3 { padding: 6px !important; }
-    .p-4 { padding: 8px !important; }
-    .p-5 { padding: 10px !important; }
+/* Единые стили для всех устройств - как на ПК */
+html, body {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    background: var(--tg-theme-bg-color, var(--bg-primary)) !important;
+    color: var(--tg-theme-text-color, var(--text-primary)) !important;
+    padding: 10px !important;
+    overflow-x: auto !important;
+}
+
+.container {
+    max-width: 100% !important;
+    padding: 0 10px !important;
+}
+
+/* Заголовки нормального размера */
+h1 {
+    font-size: 22px !important;
+    margin-bottom: 15px !important;
+    color: var(--tg-theme-text-color, var(--accent-color)) !important;
+}
+
+h2 {
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+}
+
+h3 {
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
+}
+
+/* Сетка товаров как на ПК */
+.products-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 15px !important;
+    margin-bottom: 20px !important;
+}
+
+/* Карточки товаров нормального размера */
+.product-card {
+    padding: 15px !important;
+    border-radius: 8px !important;
+    background: var(--tg-theme-secondary-bg-color, var(--bg-secondary)) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.product-card img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 6px !important;
+    margin-bottom: 10px !important;
+}
+
+.product-title {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 8px !important;
+    font-weight: 500 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+.product-price {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin-bottom: 10px !important;
+    color: var(--accent-color) !important;
+}
+
+/* Кнопки нормального размера */
+.btn {
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    min-height: 36px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary {
+    background: var(--accent-color) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover) !important;
+}
+
+/* Категории и фильтры нормального размера */
+.category-filter {
+    margin-bottom: 20px !important;
+    display: flex !important;
+    gap: 10px !important;
+    align-items: center !important;
+}
+
+.category-filter select {
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
+    background: var(--tg-theme-secondary-bg-color, var(--bg-secondary)) !important;
+    color: var(--tg-theme-text-color, var(--text-primary)) !important;
+    border: 1px solid var(--border-color) !important;
+    min-width: 150px !important;
+}
+
+/* Навигация нормального размера */
+.header {
+    padding: 15px 0 !important;
+    margin-bottom: 20px !important;
+}
+
+.navbar {
+    padding: 10px 0 !important;
+}
+
+.nav-logo h1 {
+    font-size: 22px !important;
+    margin: 0 !important;
+}
+
+.nav-tagline {
+    font-size: 12px !important;
+    opacity: 0.8 !important;
+}
+
+.nav-menu {
+    display: flex !important;
+    gap: 20px !important;
+}
+
+.nav-link {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+    text-decoration: none !important;
+    color: var(--tg-theme-text-color, var(--text-primary)) !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: var(--accent-color) !important;
+    color: white !important;
+}
+
+.search-input {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+    width: 200px !important;
+    border-radius: 6px !important;
+    border: 1px solid var(--border-color) !important;
+    background: var(--tg-theme-secondary-bg-color, var(--bg-secondary)) !important;
+    color: var(--tg-theme-text-color, var(--text-primary)) !important;
+}
+
+.cart-btn {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+    min-height: 36px !important;
+    background: var(--accent-color) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+}
+
+.cart-count {
+    font-size: 12px !important;
+    background: white !important;
+    color: var(--accent-color) !important;
+    border-radius: 50% !important;
+    min-width: 20px !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    text-align: center !important;
+    margin-left: 5px !important;
+}
+
+/* Формы нормального размера */
+.form-group {
+    margin-bottom: 15px !important;
+}
+
+.form-group label {
+    font-size: 14px !important;
+    margin-bottom: 5px !important;
+    font-weight: 500 !important;
+    display: block !important;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
+    min-height: 40px !important;
+    width: 100% !important;
+    border: 1px solid var(--border-color) !important;
+    background: var(--tg-theme-secondary-bg-color, var(--bg-secondary)) !important;
+    color: var(--tg-theme-text-color, var(--text-primary)) !important;
+}
+
+/* Корзина нормального размера */
+.cart-section {
+    margin-top: 20px !important;
+    padding: 15px !important;
+    background: var(--tg-theme-secondary-bg-color, var(--bg-secondary)) !important;
+    border-radius: 8px !important;
+}
+
+.cart-item {
+    padding: 12px !important;
+    margin-bottom: 10px !important;
+    background: var(--tg-theme-bg-color, var(--bg-primary)) !important;
+    border-radius: 6px !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.cart-item-title {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin-bottom: 5px !important;
+}
+
+.cart-item-price {
+    font-size: 14px !important;
+    color: var(--accent-color) !important;
+}
+
+.cart-controls button {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    border-radius: 4px !important;
+    border: 1px solid var(--border-color) !important;
+    background: var(--tg-theme-secondary-bg-color, var(--bg-secondary)) !important;
+    color: var(--tg-theme-text-color, var(--text-primary)) !important;
+    cursor: pointer !important;
+}
+
+.quantity-display {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+    background: var(--tg-theme-secondary-bg-color, var(--bg-secondary)) !important;
+    border-radius: 4px !important;
+    min-width: 40px !important;
+    text-align: center !important;
 }
 }
 
