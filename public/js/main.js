@@ -224,6 +224,17 @@ function getFallbackItems() {
 }
 
 // ===== CART FUNCTIONS =====
+function getCartItems() {
+    return cart.items || [];
+}
+
+function calculateCartTotal() {
+    const items = getCartItems();
+    return items.reduce((total, item) => {
+        return total + (item.price * item.quantity);
+    }, 0);
+}
+
 async function addToCart(id, size = 'M') {
     try {
         console.log('Добавляем в корзину:', id, size);
