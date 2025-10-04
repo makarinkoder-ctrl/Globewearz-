@@ -1,3 +1,52 @@
+// ===== TELEGRAM WEB APP INTEGRATION =====
+let tg = window.Telegram?.WebApp;
+
+// Настройка Telegram Web App
+if (tg) {
+    tg.ready();
+    tg.expand(); // Развернуть на весь экран
+    
+    // Применить темы Telegram
+    document.addEventListener('DOMContentLoaded', function() {
+        if (tg.themeParams) {
+            document.body.style.backgroundColor = tg.themeParams.bg_color || '#000000';
+            document.body.style.color = tg.themeParams.text_color || '#ffffff';
+        }
+        
+        // Настроить главную кнопку
+        tg.MainButton.setText('Оформить заказ 🛒');
+        tg.MainButton.color = tg.themeParams.button_color || '#007AFF';
+        tg.MainButton.textColor = tg.themeParams.button_text_color || '#ffffff';
+        
+        // Обработчик главной кнопки
+        tg.MainButton.onClick(() => {
+            const cartItems = getCartItems();
+            if (cartItems.length > 0) {
+                showCheckoutModal();
+            } else {
+                showNotification('Корзина пуста! Добавьте товары для заказа', 'error');
+            }
+        });
+        
+        // Скрыть главную кнопку по умолчанию
+        tg.MainButton.hide();
+    });
+}
+
+// Функция обновления главной кнопки Telegram
+function updateTelegramMainButton() {
+    if (!tg) return;
+    
+    const cartItems = getCartItems();
+    if (cartItems.length > 0) {
+        const total = calculateCartTotal();
+        tg.MainButton.setText(`Заказать за ${total.toFixed(2)} ¥`);
+        tg.MainButton.show();
+    } else {
+        tg.MainButton.hide();
+    }
+}
+
 // ===== GLOBAL VARIABLES =====
 let sessionId = generateSessionId();
 let cart = { items: [], total: 0 };
@@ -564,6 +613,9 @@ function updateCartUI() {
 
 function updateCartDisplay() {
     updateCartUI();
+    
+    // Обновляем главную кнопку Telegram
+    updateTelegramMainButton();
     
     // Если модальное окно корзины открыто, обновляем его содержимое
     const cartModal = document.getElementById('cart-modal');
