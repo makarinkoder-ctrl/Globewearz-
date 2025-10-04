@@ -1,17 +1,39 @@
 /* ===== TELEGRAM WEB APP OPTIMIZATION ===== */
 /* Единые стили для всех устройств - как на ПК */
+html {
+    overflow-x: hidden !important;
+    -webkit-text-size-adjust: 100% !important;
+    -webkit-tap-highlight-color: transparent !important;
+    touch-action: pan-y !important; /* Разрешить только вертикальный скролл */
+}
+
 html, body {
     font-size: 14px !important;
     line-height: 1.5 !important;
     background: var(--tg-theme-bg-color, var(--bg-primary)) !important;
     color: var(--tg-theme-text-color, var(--text-primary)) !important;
     padding: 10px !important;
-    overflow-x: auto !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    position: fixed !important; /* Фиксируем для предотвращения сворачивания */
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
 }
 
+/* Основной контейнер */
 .container {
     max-width: 100% !important;
     padding: 0 10px !important;
+    height: auto !important;
+    min-height: calc(100vh - 20px) !important;
+}
+
+/* Прокручиваемый контент */
+.scrollable {
+    -webkit-overflow-scrolling: touch !important;
+    overflow-y: auto !important;
 }
 
 /* Заголовки нормального размера */

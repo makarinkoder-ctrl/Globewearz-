@@ -5,6 +5,24 @@ let tg = window.Telegram?.WebApp;
 if (tg) {
     tg.ready();
     tg.expand(); // Развернуть на весь экран
+    tg.enableClosingConfirmation(); // Подтверждение закрытия
+    tg.disableVerticalSwipes(); // Отключить свайпы вверх/вниз
+    tg.lockOrientation(); // Заблокировать поворот экрана
+    
+    // Предотвращаем сворачивание при скролле
+    document.addEventListener('touchstart', function(e) {
+        if (e.touches.length > 1) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+    
+    document.addEventListener('touchmove', function(e) {
+        // Разрешаем скролл только внутри контента
+        const scrollableElement = e.target.closest('.scrollable, .products-grid, .catalog-container, body');
+        if (!scrollableElement) {
+            e.preventDefault();
+        }
+    }, { passive: false });
     
     // Применить темы Telegram
     document.addEventListener('DOMContentLoaded', function() {
@@ -31,6 +49,10 @@ if (tg) {
         // Скрыть главную кнопку по умолчанию
         tg.MainButton.hide();
     });
+    
+    // Настройки для стабильности
+    tg.setHeaderColor('#000000');
+    tg.setBackgroundColor('#000000');
 }
 
 // Функция обновления главной кнопки Telegram
