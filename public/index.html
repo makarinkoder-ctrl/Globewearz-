@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobeWearZ 🌍 - Premium Streetwear из Taobao</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>🌍 GlobeWearZ</h1>
+                    <span class="nav-tagline">Premium Streetwear</span>
+                </div>
+                
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link active">Главная</a>
+                    <a href="#catalog" class="nav-link">Каталог</a>
+                    <a href="#bestsellers" class="nav-link">Хиты</a>
+                    <a href="#about" class="nav-link">О нас</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Поиск товаров..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <button class="cart-btn" id="cart-btn">
+                        🛒 <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">🔥 Новая коллекция</div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">GlobeWearZ</span><br>
+                    Стиль без границ
+                </h1>
+                <p class="hero-subtitle">
+                    Премиум streetwear и lifestyle товары прямо из Taobao.<br>
+                    Проверенное качество, доступные цены, быстрая доставка.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('catalog')">
+                        🛒 Смотреть каталог
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('bestsellers')">
+                        ⚡ Хиты продаж
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Товаров</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Поддержка</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Товаров</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="floating-card">🔥 Fear of God</div>
+                    <div class="floating-card">⚡ Jordan 1</div>
+                    <div class="floating-card">💎 Chrome Hearts</div>
+                    <div class="floating-card">🌟 Off-White</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">🌍 Категории товаров</h2>
+            <div class="categories-grid" id="categories-grid">
+                <!-- Категории будут загружены JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Bestsellers -->
+    <section id="bestsellers" class="bestsellers">
+        <div class="container">
+            <h2 class="section-title">🔥 Хиты продаж</h2>
+            <div class="products-grid" id="bestsellers-grid">
+                <!-- Бестселлеры будут загружены JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog -->
+    <section id="catalog" class="catalog">
+        <div class="container">
+            <div class="catalog-header">
+                <h2 class="section-title">🛒 Каталог товаров</h2>
+            </div>
+            <div class="catalog-filters">
+                <div class="filter-group">
+                    <label class="filter-label">Категория</label>
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">🌟 Все категории</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Сортировка</label>
+                    <select id="sort-filter" class="filter-select">
+                        <option value="default">🔥 По умолчанию</option>
+                        <option value="price-asc">💰 Цена: дешевле</option>
+                        <option value="price-desc">💎 Цена: дороже</option>
+                        <option value="name">🔤 По названию</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-grid" id="catalog-grid">
+                <!-- Товары будут загружены JS -->
+            </div>
+            <div class="load-more-container">
+                <button class="btn btn-secondary" id="load-more-btn">Загрузить еще</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">💎 О GlobeWearZ</h2>
+                    <p class="about-description">
+                        Мы - команда энтузиастов streetwear культуры, которая привозит лучшие вещи прямо из Китая!
+                        Наша миссия - сделать качественную streetwear одежду доступной для каждого.
+                    </p>
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">🔍</div>
+                            <div class="feature-text">
+                                <h4>Проверенные поставщики</h4>
+                                <p>Работаем только с надежными продавцами на Taobao</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✅</div>
+                            <div class="feature-text">
+                                <h4>Контроль качества</h4>
+                                <p>Каждый товар проходит проверку перед отправкой</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🚀</div>
+                            <div class="feature-text">
+                                <h4>Быстрая доставка</h4>
+                                <p>Доставляем товары в кратчайшие сроки</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">💰</div>
+                            <div class="feature-text">
+                                <h4>Честные цены</h4>
+                                <p>Прозрачное ценообразование без скрытых платежей</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <h4>📞 Связаться с нами:</h4>
+                        <p>Telegram: <a href="https://t.me/bg.m01k" target="_blank">@bg.m01k</a></p>
+                        <p>Время работы: 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🛒 Ваша корзина</h3>
+                <button class="modal-close" id="close-cart">&times;</button>
+            </div>
+            <div class="modal-body" id="cart-items">
+                <!-- Товары корзины будут загружены JS -->
+            </div>
+            <div class="modal-footer" id="cart-footer">
+                <!-- Итого и кнопки будут загружены JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📋 Оформление заказа</h3>
+                <button class="modal-close" id="close-checkout">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="checkout-form">
+                    <div class="form-section">
+                        <h4>👤 Контактная информация</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customer-name">Имя и фамилия *</label>
+                                <input type="text" id="customer-name" name="name" placeholder="Введите ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-phone">Телефон *</label>
+                                <input type="tel" id="customer-phone" name="phone" placeholder="+7 999 123 45 67" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-email">Email *</label>
+                            <input type="email" id="customer-email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>🌍 Адрес доставки</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="delivery-country">Страна *</label>
+                                <select id="delivery-country" name="country" required onchange="updateDeliveryCalculation()">
+                                    <option value="">Выберите страну</option>
+                                    <option value="RU">🇷🇺 Россия</option>
+                                    <option value="KZ">🇰🇿 Казахстан</option>
+                                    <option value="BY">🇧🇾 Беларусь</option>
+                                    <option value="UA">🇺🇦 Украина</option>
+                                    <option value="UZ">🇺🇿 Узбекистан</option>
+                                    <option value="KG">🇰🇬 Киргизия</option>
+                                    <option value="TJ">🇹🇯 Таджикистан</option>
+                                    <option value="US">🇺🇸 США</option>
+                                    <option value="DE">🇩🇪 Германия</option>
+                                    <option value="FR">🇫🇷 Франция</option>
+                                    <option value="IT">🇮🇹 Италия</option>
+                                    <option value="ES">🇪🇸 Испания</option>
+                                    <option value="GB">🇬🇧 Великобритания</option>
+                                    <option value="PL">🇵🇱 Польша</option>
+                                    <option value="CZ">🇨🇿 Чехия</option>
+                                    <option value="TR">🇹🇷 Турция</option>
+                                    <option value="CN">🇨🇳 Китай</option>
+                                    <option value="JP">🇯🇵 Япония</option>
+                                    <option value="KR">🇰🇷 Южная Корея</option>
+                                    <option value="AU">🇦🇺 Австралия</option>
+                                    <option value="CA">🇨🇦 Канада</option>
+                                    <option value="BR">🇧🇷 Бразилия</option>
+                                    <option value="OTHER">🌍 Другая страна</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery-region">Регион/Область</label>
+                                <input type="text" id="delivery-region" name="region" placeholder="Московская область">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="delivery-city">Город *</label>
+                                <input type="text" id="delivery-city" name="city" placeholder="Москва" required onchange="updateDeliveryCalculation()" onblur="updateDeliveryCalculation()">
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery-postal">Почтовый индекс</label>
+                                <input type="text" id="delivery-postal" name="postal" placeholder="123456">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-address">Полный адрес *</label>
+                            <textarea id="delivery-address" name="address" placeholder="Улица, дом, квартира..." required rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-notes">Примечания к доставке</label>
+                            <textarea id="delivery-notes" name="delivery_notes" placeholder="Особые инструкции для курьера..." rows="2"></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Калькулятор доставки -->
+                    <div class="delivery-section">
+                        <h4>🚚 Расчет доставки</h4>
+                        <p class="delivery-hint">Сначала укажите страну и город выше для расчета стоимости доставки</p>
+                        <div id="delivery-loading" class="delivery-loading" style="display: none;">
+                            <div class="loading-spinner"></div>
+                            <p>Рассчитываем стоимость доставки...</p>
+                        </div>
+                        <div id="delivery-methods" class="delivery-methods">
+                            <p style="color: var(--text-secondary); text-align: center; padding: 2rem;">
+                                📍 Укажите страну и город доставки для расчета стоимости
+                            </p>
+                        </div>
+                        
+                        <div class="additional-services">
+                            <h5>📦 Дополнительные услуги</h5>
+                            <div id="additional-services">
+                                <!-- Дополнительные услуги будут загружены JS -->
+                            </div>
+                        </div>
+                        
+                        <div class="delivery-summary" id="delivery-summary">
+                            <!-- Итоговая информация о доставке -->
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-notes">Комментарии к заказу</label>
+                        <textarea id="customer-notes" name="notes" rows="2" placeholder="Дополнительные пожелания..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="back-to-cart">← Назад к корзине</button>
+                <button type="submit" form="checkout-form" class="btn btn-primary" id="submit-order">🚀 Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content product-modal-content">
+            <div class="modal-header">
+                <h3 id="product-modal-title"></h3>
+                <button class="modal-close" id="close-product">&times;</button>
+            </div>
+            <div class="modal-body" id="product-modal-body">
+                <!-- Детали товара будут загружены JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <span class="notification-icon"></span>
+            <span class="notification-text"></span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌍 GlobeWearZ</h3>
+                    <p>Премиум streetwear и lifestyle товары прямо из Taobao.</p>
+                    <div class="social-links">
+                        <a href="https://t.me/bg.m01k" target="_blank">📱 Telegram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Категории</h4>
+                    <ul>
+                        <li><a href="#catalog">🔥 Худи</a></li>
+                        <li><a href="#catalog">⚡ Кроссовки</a></li>
+                        <li><a href="#catalog">🌟 Футболки</a></li>
+                        <li><a href="#catalog">💎 Аксессуары</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#about">Доставка</a></li>
+                        <li><a href="#about">Поддержка</a></li>
+                        <li><a href="#about">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <p>📞 Telegram: <a href="https://t.me/bg.m01k">@bg.m01k</a></p>
+                    <p>🕐 Время работы: 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GlobeWearZ. Стиль без границ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

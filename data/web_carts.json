@@ -1,0 +1,243 @@
+{
+  "session_1759529127661_4bh5b63kh": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759529511268_9px3g41in": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759529571730_uafbghjzb": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759529573030_vd03d1e69": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759531675436_lw3o3ojr9": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759531679282_09vjabcas": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759531680478_lchfmjw5n": {
+    "items": [
+      {
+        "id": "tb_tshirt_001",
+        "title": "🌟 Off-White Arrows Tee",
+        "price": 28.99,
+        "category": "tshirts",
+        "seller": "Designer Zone",
+        "quantity": 1,
+        "size": "M",
+        "weight": 0.5
+      },
+      {
+        "id": "tb_hoodie_001",
+        "title": "🔥 Essentials Fear of God Hoodie Oversized",
+        "price": 42.99,
+        "category": "hoodies",
+        "seller": "Supreme Store CN",
+        "quantity": 1,
+        "size": "M",
+        "weight": 0.5
+      }
+    ],
+    "total": null
+  },
+  "session_1759563990315_9sfnhe27r": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759563991576_ynf4mrchl": {
+    "items": [
+      {
+        "id": "tb_hoodie_001",
+        "title": "🔥 Essentials Fear of God Hoodie Oversized",
+        "price": 42.99,
+        "category": "hoodies",
+        "seller": "Supreme Store CN",
+        "quantity": 1,
+        "size": "M",
+        "weight": 0.5
+      },
+      {
+        "id": "tb_tshirt_001",
+        "title": "🌟 Off-White Arrows Tee",
+        "price": 28.99,
+        "category": "tshirts",
+        "seller": "Designer Zone",
+        "quantity": 1,
+        "size": "M",
+        "weight": 0.5
+      }
+    ],
+    "total": null
+  },
+  "session_1759564013309_5rb0pgail": {
+    "items": [
+      {
+        "id": "tb_hoodie_002",
+        "title": "⚡ Stussy World Tour Hoodie Vintage",
+        "price": 38.5,
+        "category": "hoodies",
+        "seller": "Streetwear Hub",
+        "quantity": 2,
+        "size": "M",
+        "weight": 0.5
+      }
+    ],
+    "total": null
+  },
+  "session_1759564148777_pqwj3v8u9": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759564208959_qmajyviml": {
+    "items": [
+      {
+        "id": "tb_sneakers_002",
+        "title": "🚀 Nike Dunk Low Panda",
+        "price": 67.5,
+        "category": "sneakers",
+        "seller": "Sneaker Kingdom",
+        "quantity": 1,
+        "size": "M",
+        "weight": 0.5
+      }
+    ],
+    "total": null
+  },
+  "session_1759564354407_pbsa09gj2": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759564355776_bt462bhc7": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759564356203_4gya157z6": {
+    "items": [
+      {
+        "id": "tb_hoodie_001",
+        "title": "🔥 Essentials Fear of God Hoodie Oversized",
+        "price": 42.99,
+        "category": "hoodies",
+        "seller": "Supreme Store CN",
+        "quantity": 1,
+        "size": "M",
+        "weight": 0.5
+      }
+    ],
+    "total": null
+  },
+  "session_1759564369326_b9rqw84uh": {
+    "items": [
+      {
+        "id": "tb_hoodie_002",
+        "title": "⚡ Stussy World Tour Hoodie Vintage",
+        "price": 38.5,
+        "category": "hoodies",
+        "seller": "Streetwear Hub",
+        "quantity": 1,
+        "size": "M",
+        "weight": 0.5
+      }
+    ],
+    "total": null
+  },
+  "session_1759564479930_7pb0l8ezm": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759564492297_1btpxfcu7": {
+    "items": [
+      {
+        "id": "tb_hoodie_001",
+        "title": "🔥 Essentials Fear of God Hoodie Oversized",
+        "price": 42.99,
+        "finalPrice": 55.88700000000001,
+        "category": "hoodies",
+        "seller": "Supreme Store CN",
+        "quantity": 1,
+        "size": "M",
+        "weight": 0.5
+      }
+    ],
+    "total": 55.88700000000001
+  },
+  "session_1759564575303_5yhd1e7eq": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759564575878_t93ecpgzz": {
+    "items": [
+      {
+        "id": "tb_hoodie_001",
+        "title": "🔥 Essentials Fear of God Hoodie Oversized",
+        "price": 42.99,
+        "finalPrice": 55.88700000000001,
+        "category": "hoodies",
+        "seller": "Supreme Store CN",
+        "quantity": 1,
+        "size": "M",
+        "weight": 0.5
+      }
+    ],
+    "total": 55.88700000000001
+  },
+  "session_1759565023617_eudsvo9y8": {
+    "items": [
+      {
+        "id": "tb_sneakers_001",
+        "title": "👑 Nike Jordan 1 Retro High Chicago",
+        "price": 89.99,
+        "finalPrice": 116.987,
+        "category": "sneakers",
+        "seller": "Air Force Store",
+        "quantity": 1,
+        "size": "XL",
+        "weight": 0.5
+      },
+      {
+        "id": "tb_tshirt_001",
+        "title": "🌟 Off-White Arrows Tee",
+        "price": 28.99,
+        "finalPrice": 37.687,
+        "category": "tshirts",
+        "seller": "Designer Zone",
+        "quantity": 1,
+        "size": "M",
+        "weight": 0.5
+      }
+    ],
+    "total": 154.67399999999998
+  },
+  "session_1759565315840_gv8eml60i": {
+    "items": [],
+    "total": 0
+  },
+  "session_1759565703894_5drn1v6oc": {
+    "items": [
+      {
+        "id": "tb_hoodie_002",
+        "title": "⚡ Stussy World Tour Hoodie Vintage",
+        "price": 38.5,
+        "finalPrice": 50.050000000000004,
+        "category": "hoodies",
+        "seller": "Streetwear Hub",
+        "quantity": 1,
+        "size": "M",
+        "weight": 0.5
+      }
+    ],
+    "total": 50.050000000000004
+  },
+  "session_1759568450620_llk9l7tzo": {
+    "items": [],
+    "total": 0
+  }
+}
