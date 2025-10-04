@@ -3,7 +3,7 @@ const TelegramBot = require('node-telegram-bot-api');
 // Конфигурация бота
 const BOT_TOKEN = '8474179699:AAF0hwS1VTzlIyMjrF7Blqj_bRtpmVEKSdM';
 const ADMIN_CHAT_ID = '5557326250';
-const WEB_APP_URL = 'https://globewearz.vercel.app'; // Ваш Vercel URL
+const WEB_APP_URL = 'https://globewearz.vercel.app'; // Обновленный Vercel URL
 
 // Создаем бота
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
