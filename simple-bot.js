@@ -3,7 +3,7 @@ const TelegramBot = require('node-telegram-bot-api');
 // Конфигурация бота
 const BOT_TOKEN = '8474179699:AAF0hwS1VTzlIyMjrF7Blqj_bRtpmVEKSdM';
 const ADMIN_CHAT_ID = '5557326250';
-const WEB_APP_URL = 'http://localhost:3000'; // Замените на ваш домен когда будет готов
+const WEB_APP_URL = 'https://your-vercel-url.vercel.app'; // Замените на ваш Vercel URL
 
 // Создаем бота
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
@@ -26,11 +26,20 @@ bot.onText(/\/start/, (msg) => {
 • 👟 Кроссовки и обувь
 • 🧢 Кепки и аксессуары
 
-💫 Качественные вещи по доступным ценам с доставкой по всему миру!
+💫 Качественные вещи по доступным ценам с доставкой по всему миру!`;
 
-🛍 Для заказа переходи на наш сайт: http://localhost:3000`;
+    const keyboard = {
+        reply_markup: {
+            inline_keyboard: [
+                [{
+                    text: 'Открыть Globewearz 🌍',
+                    web_app: { url: WEB_APP_URL }
+                }]
+            ]
+        }
+    };
 
-    bot.sendMessage(chatId, welcomeMessage);
+    bot.sendMessage(chatId, welcomeMessage, keyboard);
 });
 
 // Обработка любых других сообщений
@@ -42,7 +51,18 @@ bot.on('message', (msg) => {
         return;
     }
     
-    bot.sendMessage(chatId, '🌍 GlobeWearZ готов к покупкам!\n\n🛍 Заходи на наш сайт: http://localhost:3000');
+    const keyboard = {
+        reply_markup: {
+            inline_keyboard: [
+                [{
+                    text: 'Открыть Globewearz 🌍',
+                    web_app: { url: WEB_APP_URL }
+                }]
+            ]
+        }
+    };
+    
+    bot.sendMessage(chatId, '🌍 GlobeWearZ готов к покупкам!', keyboard);
 });
 
 // Обработка ошибок
